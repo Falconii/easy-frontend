@@ -1,0 +1,13 @@
+<h1>Hello</h1>
+<h1>total de itens {{lsFornecedores.length}}</h1>
+<h1>Fornecedor:{{fornecedor.razao}}</h1>
+<div>
+  <button (click)="onGetAll()">Get All</button>
+  <button (click)="onGetOne()">Get One</button>
+  <button (click)="onAddOne()">Add One</button>
+  <button (click)="onUpdateOne()">Update One</button>
+  <button (click)="onDeleteOne()">Delete One</button>
+</div>
+<ul *ngIf="lsFornecedores.length != 0">
+  <li *ngFor="let fornecedor of lsFornecedores">{{fornecedor.id}}-{{fornecedor.razao}}</li>
+</ul>
